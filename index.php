@@ -56,6 +56,9 @@ $db = [
 </head>
 
 <body>
+    <div class="logo">
+        <img src="images/googlelogo_clr_74x24px.svg" alt="Google Support">
+    </div>
     <div class="container">
         <?php foreach ($db["questions"] as $question) : ?>
             <div class="question">
