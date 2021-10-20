@@ -25,14 +25,18 @@ $db = [
     <div class="container">
         <?php foreach ($db["questions"] as $question) : ?>
             <div class="question">
-                <p>
-                    <?= $question["q"]; ?>
-                </p>
+                <?php foreach (explode("\n", $question["q"]) as $p) : ?>
+                    <h3>
+                        <?= $p; ?>
+                    </h3>
+                <?php endforeach ?>
             </div>
             <div class="response">
-                <p>
-                    <?= $question["r"]; ?>
-                </p>
+                <?php foreach (explode("\n", $question["r"]) as $p) : ?>
+                    <p>
+                        <?= $p; ?>
+                    </p>
+                <?php endforeach ?>
             </div>
         <?php endforeach ?>
     </div>
